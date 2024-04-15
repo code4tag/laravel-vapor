@@ -1,4 +1,4 @@
-FROM laradock/workspace:2.5-7.3
+FROM laradock/workspace:latest-8.1
 
 LABEL repository="https://github.com/teamnovu/laravel-vapor"
 LABEL homepage="https://github.com/teamnovu/laravel-vapor"
