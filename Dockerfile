@@ -7,9 +7,10 @@ LABEL maintainer="Oliver Kaufmann <kaufmann@novu.ch>"
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /composer
 ENV PATH "/composer/vendor/bin:~/.local/bin:$PATH"
+RUN composer self-update --2
 
+#RUN set -xe && composer global require hirak/prestissimo
 RUN set -xe && \
-        composer global require hirak/prestissimo && \
         composer global require laravel/vapor-cli && \
         composer clear-cache
 

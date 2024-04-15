@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-docker build -t teamnovu/laravel-vapor:latest .
 
-docker run --interactive --tty
-  teamnovu/laravel-vapor vapor list
+docker buildx build --platform linux/amd64  -t code4tag/laravel-vapor:latest .
+
+docker run -it code4tag/laravel-vapor:latest vapor list
